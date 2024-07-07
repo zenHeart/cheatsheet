@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "cheatsheet",
-  base: '/cheatsheet/'
+  base: '/cheatsheet/',
   description: "save cheatsheet",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
