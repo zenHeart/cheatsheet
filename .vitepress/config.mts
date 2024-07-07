@@ -7,6 +7,9 @@ export default defineConfig({
   description: "save cheatsheet",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    search: {
+      provider: 'local'
+    },
     nav: [
       { text: 'Home', link: '/' },
       { text: 'CheatSheet', 

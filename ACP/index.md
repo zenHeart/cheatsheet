@@ -1,134 +1,59 @@
 ---
 outline: deep
 ---
+# 概述
+参考 [阿里云 ACP 认证官方资料](https://edu.aliyun.com/certification/acp01?spm=a2cwt.28380597.J_1564692210.3.17f53487EEWN8Y) 汇总相关信息,官方资料地址
 
-# Markdown Extension Examples
+* [ACP 认证学习路线](https://developer.aliyun.com/learning/topic/certificate) 免费，提供 PDF 和实验
+* [阿里云ACP认证培训课程 2023](https://edu.aliyun.com/public_file/download/37ddbf5b129e40d98b9974a9ec384496) 免费，登录后可领取
+* [阿里云ACP认证大纲 2023](https://edu.aliyun.com/public_file/download/f1ace158535848d792db57645e1db5b1) 免费，登录后可领取
+* [阿里云云计算高级工程师ACP认证视频 2023](https://edu.aliyun.com/course/3149) 付费视频
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+1. 考试形式为 `在线考试+线下上级考试`
+2. 试卷满分 100 分，80 分通过。考试时间 120 分钟，题型组成 `单选 70 题，多选 30 题， 每题一分`
+3. 试卷内容见后续 [知识点](#知识点)
+4. 通过标准完成线下考试和线上实验即可获取证书
+   1. 实验未规定具体完成时间，可以在线下考试后完成，线下考试后 2 天会出成绩
+   2. 实验不存在考核情况，只需要参照阿里云实验操作手册在实验约定的时间范围内完成操作即可，每个实验有两次机会
+  
 
-## Syntax Highlighting
+## 知识点
+基于 [阿里云ACP认证大纲 2023](https://edu.aliyun.com/public_file/download/f1ace158535848d792db57645e1db5b1) 总结知识点
 
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
+### 基础云应用架构 35%
+#### 根据业务场景划分云计算服务
 
-**Input**
+#### 根据业务要求构建合适的分层架构方案
 
-````md
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-````
+#### 根据要求选择适当的计算服务、存储服务和数据库
 
-**Output**
+#### 根据规划完成基础应用架构的部署和配置
 
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
+### 复杂云网络架构 25%
+#### 根据业务场景完成数据中心网络（虚拟专有网络、NAT 网关等）的规划和构建
+#### 根据业务场景完成应用交付网络（负载均衡、全球加速、弹性公网
+IP 等）的规划和构建
 
-## Custom Containers
-
-**Input**
-
-```md
-::: info
-This is an info box.
-:::
-
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
-```
-
-**Output**
-
-::: info
-This is an info box.
-:::
-
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
-
-## More
-
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+#### 根据业务场景完成互联互通网络（云企业网、VPN 网关、高速通道等）的规划和构建
 
 
-This page demonstrates usage of some of the runtime APIs provided by VitePress.
+### 云上高可用、高性能架构 25%
+#### 根据业务需求规划跨地域、跨可用区资源
 
-The main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:
+#### 通过云服务的高可用配置避免单点故障
 
-```md
-<script setup>
-import { useData } from 'vitepress'
+#### 根据业务场景构建适合的备份、容灾策略
+#### 根据业务负载选择适合的云服务架构，通过负载均衡、弹性伸缩、数据库缓存、容器服务等方式实现高性能的弹性架构
 
-const { theme, page, frontmatter } = useData()
-</script>
 
-## Results
+### 云上安全体系架构 15%
+#### 具备使用云服务的基本安全意识及安全基础知识
+#### 能够正确理解**网络安全**的含义和对应防护手段，并能够利用阿里云
+DDoS 防护、Web 应用防火墙（WAF）、云防火墙等产品对企业网络环境进行安全加固
 
-### Theme Data
-<pre>{{ theme }}</pre>
 
-### Page Data
-<pre>{{ page }}</pre>
+#### 能够正确理解主机安全含义和对应防护手段，并能够利用阿里云云安全中心主机内环境进行全面的安全加固
 
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
-```
+#### 能够正确理解数据安全的含义和对应防护手段，并能够利用阿里云数据安全中心、密钥管理、加密服务、证书管家等产品实现对企业数据资产的安全管理
 
-<script setup>
-import { useData } from 'vitepress'
-
-const { site, theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-### Theme Data
-<pre>{{ theme }}</pre>
-
-### Page Data
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
-
-## More
-
-Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).
+#### 能够正确理解业务安全的含义和对应防护手段，并能够利用阿里云内容安全、实人认证、风险识别等产品帮助企业业务快速进行内容审核、风险评估以及信息校验等工作
