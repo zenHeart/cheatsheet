@@ -6,7 +6,11 @@ export default defineConfig({
   base: '/cheatsheet/',
   description: "save cheatsheet",
   themeConfig: {
+    outline: 'deep',
     // https://vitepress.dev/reference/default-theme-config
+    search: {
+      provider: 'local'
+    },
     nav: [
       { text: 'Home', link: '/' },
       { text: 'CheatSheet', 
@@ -20,6 +24,7 @@ export default defineConfig({
     ],
     sidebar: [
       { text: 'ACP', link: '/ACP/index' },
+      { text: '真题', link: '/ACP/quiz' },
     ],
   }
 })
